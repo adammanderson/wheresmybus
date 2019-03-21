@@ -1,3 +1,7 @@
-TFL_APP_ID=<APP_ID_HERE>
-TFL_APP_KEY=<APP_KEY_HERE>
-TFL_STOP_ID=<STOP_ID_HERE>
+{
+  "api": {
+    "appId": "SECRET_ID",
+    "appKey": "SECRET_KEY"
+  },
+  "stopId": "STOPID"
+}
