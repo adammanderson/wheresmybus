@@ -1,0 +1,15 @@
+{
+  "name": "wheresmybus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Anderson",
+  "license": "ISC",
+  "dependencies": {
+    "backpack-core": "0.8.3",
+    "cli-dot-matrix-display": "0.1.2"
+  }
+}
