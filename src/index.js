@@ -1,11 +1,14 @@
-const fetch = require('node-fetch');
-const chalk = require('chalk');
-const config = require('../config');
+import chalk from 'chalk'
+import { stopPointId, refresh } from '../config'
+import getStopPointArrivals from './helpers/get-stoppoint-arrivals'
+import formatArrivals from './helpers/format-arrivals'
 
-console.log(chalk.bold.blue('WHERE\'S MY BUS'))
+const log = console.log
+log(chalk.bold.blue('WHERE\'S MY BUS'))
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json))
-
-console.log(config.api.appId)
+setInterval(() => {
+  getStopPointArrivals({ stopPointId })
+    .then((arrivals) => {
+      formatArrivals(arrivals)
+    })
+}, refresh)

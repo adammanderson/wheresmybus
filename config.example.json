@@ -3,5 +3,6 @@
     "appId": "SECRET_ID",
     "appKey": "SECRET_KEY"
   },
-  "stopId": "STOPID"
+  "stopPointId": "STOPPOINTID",
+  "refresh": 30
 }
