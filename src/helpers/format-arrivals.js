@@ -13,12 +13,11 @@ const formatArrivals = (arrivals) => {
   )).map((prediction) => {
     const minutes = secondsToMinutes(prediction.timeToStation)
     return minutes > 0 ? `${minutes}m` : 'due'
-  })
-  const formattedArrivalTimes = arrivalTimes.join(' | ')
+  }).join(' | ')
   const line = chalk.white.bgRed.bold(` ${lineName} `)
   const stopInfo = chalk.dim(`${stationName} towards ${towards}`)
 
-  log(`${line} ${formattedArrivalTimes} ${stopInfo}\n`)
+  log(`${line} ${arrivalTimes} ${stopInfo}\n`)
 }
 
 export default formatArrivals

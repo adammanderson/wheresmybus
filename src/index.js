@@ -11,4 +11,5 @@ setInterval(() => {
     .then((arrivals) => {
       formatArrivals(arrivals)
     })
-}, refresh)
+    .catch(() => {})
+}, 2000)

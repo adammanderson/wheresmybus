@@ -4,5 +4,5 @@
     "appKey": "SECRET_KEY"
   },
   "stopPointId": "STOPPOINTID",
-  "refresh": 30
+  "refresh": 5000
 }
