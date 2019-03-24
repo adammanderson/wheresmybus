@@ -2,7 +2,6 @@ import time
 import asyncio
 import threading
 import scrollphathd
-from scrollphathd.fonts import font3x5
 from os import getenv
 import requests
 from math import floor
@@ -44,7 +43,7 @@ async def format_arrivals(arrivals):
 async def display_arrivals(value):
     print('Displaying arrivals')
     scrollphathd.clear()
-    length = scrollphathd.write_string(value, font=font3x5)
+    length = scrollphathd.write_string(value)
     scrollphathd.show()
     time.sleep(0.5)
     length -= scrollphathd.width
