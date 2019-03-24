@@ -8,7 +8,8 @@ from math import floor
 from dotenv import load_dotenv
 load_dotenv()
 
-scrollphathd.set_brightness(0.5)
+scrollphathd.rotate(degrees=180)
+scrollphathd.set_brightness(0.2)
 
 def seconds_to_minutes(seconds):
     return floor(seconds % 3600 / 60)
