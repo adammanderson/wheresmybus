@@ -10,6 +10,8 @@ requests = "*"
 python-dotenv = "*"
 asyncio = "*"
 scrollphathd = "*"
+smbus = "*"
+smbus2 = "*"
 
 [requires]
 python_version = "3.7"
