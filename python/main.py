@@ -1,6 +1,8 @@
 import asyncio
 from services import Arrivals
 from utils import set_interval
+from dotenv import load_dotenv
+load_dotenv()
 
 service_list = {
     'arrivals': Arrivals().get_stoppoint

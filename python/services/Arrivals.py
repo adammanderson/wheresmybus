@@ -5,7 +5,7 @@ from utils import format_minutes, seconds_to_minutes, scroll_message
 
 class Arrivals:
     def get_stoppoint(self):
-        print('Arrivals: Requesting StopPoint')
+        print(f'Arrivals: Requesting StopPoint {getenv("STOPPOINT_ID")}')
         request = requests.get(
             f'https://api.tfl.gov.uk/StopPoint/{getenv("STOPPOINT_ID")}/Arrivals',
             params={'app_id':getenv("TFL_API_ID"), 'app_key': getenv("TFL_API_KEY")}
@@ -19,7 +19,7 @@ class Arrivals:
 
     def __format_arrivals(self, arrivals):
         if not arrivals:
-            return 'No arrivals'
+            scroll_message('No arrivals')
 
         line_name = arrivals[0]['lineName']
         arrivals.sort(key=lambda k: k['timeToStation'], reverse=True)
