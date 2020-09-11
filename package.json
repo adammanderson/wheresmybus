@@ -14,7 +14,7 @@
     "chalk": "2.4.2",
     "cli-dot-matrix-display": "0.1.2",
     "i2c-bus": "4.0.9",
-    "node-fetch": "2.3.0",
+    "node-fetch": "2.6.1",
     "ora": "3.2.0",
     "shelljs": "0.8.3"
   }
